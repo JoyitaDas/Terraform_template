@@ -7,15 +7,6 @@ variable "region" {
   default = "eu-west-1"
 }
 
-variable "deploy_region" {
-  default = "eu-west-1"
-}
-
-variable "costcode_tag" {
-  description = "Costcode tag"
-  default     = "10389392"
-}
-
 variable "environment" {
   description = "Environment being used"
   default = "dev"
@@ -27,15 +18,24 @@ variable "ami_id" {
 }
 
 variable "base_cidr_block" {
-  default = "10.83.104.0/24"
+  default = "172.49.0.0/24"
 }
 
-variable "cidr_block_public" {
-    default = "10.83.104.0/24"
+variable "public_subnet1" {
+    default = "172.49.0.0/27"
 }
-variable "cidr_block_private" {
-    default = "10.83.104.65/24"
+variable "private_subnet1" {
+    default = "172.49.0.32/27"
 }
+variable "public_subnet2" {
+  default = "172.49.0.64/27"
+}
+
+variable "private_subnet2" {
+  default = "172.49.0.96/27"
+}
+
+
 variable "availability_zone1" {
     default = "eu-west-1a"
 }
